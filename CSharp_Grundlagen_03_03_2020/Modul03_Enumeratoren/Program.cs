@@ -35,9 +35,9 @@ namespace Modul03_Enumeratoren
             {
                 Console.WriteLine($"{i}: {(Wochentag)i}");
             }
+
+
             Console.ReadKey();
-
-
             DinnerItems myOrder = DinnerItems.Appetizer | DinnerItems.Entree |
                            DinnerItems.Beverage | DinnerItems.Dessert;
 

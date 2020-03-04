@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul02_Kontrollstrukturen"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul03_Enumeratoren", "Modul03_Enumeratoren\Modul03_Enumeratoren.csproj", "{EF3B125C-889B-48A9-855E-C2FDA107C417}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul03_Functions", "Modul03_Functions\Modul03_Functions.csproj", "{E71FB72B-D140-4255-920A-8520CCCBF199}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04_Lib", "Modul04_Lib\Modul04_Lib.csproj", "{D425CFE5-C8BB-4EE0-8C11-582E0366FA47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{EF3B125C-889B-48A9-855E-C2FDA107C417}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF3B125C-889B-48A9-855E-C2FDA107C417}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF3B125C-889B-48A9-855E-C2FDA107C417}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E71FB72B-D140-4255-920A-8520CCCBF199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E71FB72B-D140-4255-920A-8520CCCBF199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E71FB72B-D140-4255-920A-8520CCCBF199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E71FB72B-D140-4255-920A-8520CCCBF199}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D425CFE5-C8BB-4EE0-8C11-582E0366FA47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D425CFE5-C8BB-4EE0-8C11-582E0366FA47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D425CFE5-C8BB-4EE0-8C11-582E0366FA47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D425CFE5-C8BB-4EE0-8C11-582E0366FA47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

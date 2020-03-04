@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Modul02_Kontrollstrukturen
 {
@@ -11,6 +11,9 @@ namespace Modul02_Kontrollstrukturen
     {
         static void Main(string[] args)
         {
+
+
+
             int a = 25;
             int b = 30;
 
@@ -149,6 +152,8 @@ namespace Modul02_Kontrollstrukturen
             zahlenArray[3] = 4;
             zahlenArray[4] = 5;
             //zahlenArray[5] = 6; -> OutOfRangeException 
+       
+
 
             //Arraygröße wird anhand der Elementen - Menge bestimmt
             int[] zahlenArray2 = { 5, 6, 12, 23, 65, 34, 25, 28, 44, 2, 3, 222 };
