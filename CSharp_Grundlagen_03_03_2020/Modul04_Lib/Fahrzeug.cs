@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modul04_Lib
 {
+
     public class Fahrzeug
     {
         private int baujahr;
@@ -13,8 +14,36 @@ namespace Modul04_Lib
         private string modell;
         private double aktGeschwindigkeit;
         private double maxGeschwindigkeit;
+        public string Farbe { get; set; }
 
-        private string _farbe;
+
+        //Default Konstruktor
+        public Fahrzeug()
+        {
+            MotorLäuft = false;
+            AktGeschwindigkeit = 0;
+        }
+
+        public Fahrzeug(string marke, string modell, int baujahr, double maxGeschw)
+            : this()
+        {
+            Marke = marke;
+            Modell = modell;
+            Baujahr = baujahr;
+            MaxGeschwindigkeit = maxGeschw;
+        }
+
+        public Fahrzeug(string marke, string modell, int baujahr, double maxGeschw, string Farbe)
+            : this (marke, modell, baujahr, maxGeschw)
+        {
+            this.Farbe = Farbe;
+        }
+
+        public Fahrzeug (Garage garage)
+            : this (garage.Fahrzeug.Marke, garage.Fahrzeug.Modell, garage.Fahrzeug.Baujahr, garage.Fahrzeug.MaxGeschwindigkeit, garage.Fahrzeug.Farbe)
+        {
+            
+        }
 
 
         // Auto Property -> Membervariable wird automatisch im Hintergrund angelegt. 
@@ -101,6 +130,24 @@ namespace Modul04_Lib
             MotorLäuft = false;
             AktGeschwindigkeit = 0;
         }
-        
+
+        public override string ToString()
+        {
+            return $"{Marke} - {Modell} -Baujahr: {Baujahr} Höchstgeschwindigkeit: {MaxGeschwindigkeit}";
+        }
+
+
+        #region static Methoden
+        public static double KmhTOMph(double kmph)
+        {
+            return 0.6214 * kmph;
+        }
+
+        public static double MphTOKmh(double mph)
+        {
+            return mph * 1.60934;
+        }
+        #endregion
+
     }
 }
