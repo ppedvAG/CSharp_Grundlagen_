@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modul04_Lib
 {
-    public class PKW : FahrzeugBase
+    public class PKW : FahrzeugBase, IFahrlizenz
     {
         public PKW(string marke, string modell, int baujahr, double maxGeschw, string Farbe, int anzahlTueren, int anzahlRaeder) 
             : base(marke, modell, baujahr, maxGeschw, Farbe)
@@ -17,6 +17,19 @@ namespace Modul04_Lib
 
         public int AnzahlRader { get; set; }
         public int AnzahlTueren { get; set; }
+
+        public int Altergrenz()
+        {
+            return 17;
+        }
+
+        public bool DarfIchBenutzen(int alter)
+        {
+            if (alter < 17)
+                return false;
+
+            return true;
+        }
     }
 
     public class BobbyCar : FahrzeugBase

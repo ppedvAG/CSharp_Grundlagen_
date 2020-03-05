@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modul04_Lib
 {
-    public class FlugzeugBase : FahrzeugBase
+    public class FlugzeugBase : FahrzeugBase, IFahrlizenz
     {
 
         private double spannweite;
@@ -28,6 +28,19 @@ namespace Modul04_Lib
         public double Spannweite { get => spannweite; set => spannweite = value; }
         public int MaxFlughoehe { get => maxFlughoehe; set => maxFlughoehe = value; }
         public int AktFlughoehe { get => aktFlughoehe; set => aktFlughoehe = value; }
+
+        public virtual int Altergrenz()
+        {
+            return 18;
+        }
+
+        public virtual bool DarfIchBenutzen(int alter)
+        {
+            if (alter < 18)
+                return false;
+
+            return true;
+        }
     }
 
     public class Jet : FlugzeugBase
@@ -41,6 +54,16 @@ namespace Modul04_Lib
 
         int Düsenanzahl { get; set; }
         double Schubkraft { get; set; }
+
+        public override int Altergrenz()
+        {
+            return 21;
+        }
+
+        public override bool DarfIchBenutzen(int alter)
+        {
+            return alter >= 21 ? true : false;
+        }
     }
 
     public class Propeller : FlugzeugBase
