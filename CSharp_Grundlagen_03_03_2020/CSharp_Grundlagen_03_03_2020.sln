@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04_Lib", "Modul04_Lib\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04_Class", "Modul04_Class\Modul04_Class.csproj", "{71FD89B2-E17C-4E34-9406-C64CD44C9BB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04_Virtual_Geometry", "Modul04_Virtual_Geometry\Modul04_Virtual_Geometry.csproj", "{9A7397DA-68A4-4BE5-9C33-983FA5D62BB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04_Polymorphie", "Modul04_Polymorphie\Modul04_Polymorphie.csproj", "{FD5FC3A0-F8F3-4B36-976C-6977BF7DE869}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{71FD89B2-E17C-4E34-9406-C64CD44C9BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71FD89B2-E17C-4E34-9406-C64CD44C9BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71FD89B2-E17C-4E34-9406-C64CD44C9BB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A7397DA-68A4-4BE5-9C33-983FA5D62BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A7397DA-68A4-4BE5-9C33-983FA5D62BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A7397DA-68A4-4BE5-9C33-983FA5D62BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A7397DA-68A4-4BE5-9C33-983FA5D62BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD5FC3A0-F8F3-4B36-976C-6977BF7DE869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD5FC3A0-F8F3-4B36-976C-6977BF7DE869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD5FC3A0-F8F3-4B36-976C-6977BF7DE869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD5FC3A0-F8F3-4B36-976C-6977BF7DE869}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

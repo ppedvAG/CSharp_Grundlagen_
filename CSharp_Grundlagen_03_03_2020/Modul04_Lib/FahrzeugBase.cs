@@ -7,24 +7,31 @@ using System.Threading.Tasks;
 namespace Modul04_Lib
 {
 
-    public class Fahrzeug
+    public class FahrzeugBase
     {
+        #region Membervariablene
         private int baujahr;
         private string marke;
         private string modell;
         private double aktGeschwindigkeit;
         private double maxGeschwindigkeit;
-        public string Farbe { get; set; }
+        #endregion
 
-
+        #region Konstruktor
         //Default Konstruktor
-        public Fahrzeug()
+        public FahrzeugBase()
         {
-            MotorLäuft = false;
-            AktGeschwindigkeit = 0;
+            if (AnzahlErstellterFahrzeuge < MaxAnzahlErstellterFahrzeuge)
+            {
+                MotorLäuft = false;
+                AktGeschwindigkeit = 0;
+                AnzahlErstellterFahrzeuge++;
+            }
+            else
+                throw new Exception("Maximale Anzahl der Fahrzeuge wurde erreicht");
         }
 
-        public Fahrzeug(string marke, string modell, int baujahr, double maxGeschw)
+        public FahrzeugBase(string marke, string modell, int baujahr, double maxGeschw)
             : this()
         {
             Marke = marke;
@@ -33,19 +40,15 @@ namespace Modul04_Lib
             MaxGeschwindigkeit = maxGeschw;
         }
 
-        public Fahrzeug(string marke, string modell, int baujahr, double maxGeschw, string Farbe)
+        public FahrzeugBase(string marke, string modell, int baujahr, double maxGeschw, string Farbe)
             : this (marke, modell, baujahr, maxGeschw)
         {
             this.Farbe = Farbe;
         }
+        #endregion
 
-        public Fahrzeug (Garage garage)
-            : this (garage.Fahrzeug.Marke, garage.Fahrzeug.Modell, garage.Fahrzeug.Baujahr, garage.Fahrzeug.MaxGeschwindigkeit, garage.Fahrzeug.Farbe)
-        {
-            
-        }
-
-
+        #region Properties
+        public string Farbe { get; set; }
         // Auto Property -> Membervariable wird automatisch im Hintergrund angelegt. 
         public bool MotorLäuft { get; set; }
         
@@ -99,6 +102,10 @@ namespace Modul04_Lib
             }
         }
 
+        #endregion Properties
+
+        #region Methoden
+
         public bool MussFahrzeugZumTüv()
         {
             if (!DateTime.IsLeapYear(Baujahr))
@@ -135,7 +142,7 @@ namespace Modul04_Lib
         {
             return $"{Marke} - {Modell} -Baujahr: {Baujahr} Höchstgeschwindigkeit: {MaxGeschwindigkeit}";
         }
-
+        #endregion
 
         #region static Methoden
         public static double KmhTOMph(double kmph)
@@ -147,7 +154,11 @@ namespace Modul04_Lib
         {
             return mph * 1.60934;
         }
-        #endregion
 
+        
+
+        public static int AnzahlErstellterFahrzeuge { get; private set; } = 0;
+        public static int MaxAnzahlErstellterFahrzeuge { get; private set; } = 10;
+        #endregion
     }
 }

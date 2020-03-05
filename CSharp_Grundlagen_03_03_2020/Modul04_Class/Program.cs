@@ -10,17 +10,21 @@ namespace Modul04_Class
     {
         static void Main(string[] args)
         {
-            Fahrzeug fahrzeug = new Fahrzeug();
+            FahrzeugBase fahrzeug2 = new FahrzeugBase("VW", "Käfer", 1984, 110, "Gelb");
 
-            Fahrzeug fahrzeug2 = new Fahrzeug("VW", "Käfer", 1984, 110, "Gelb");
-
-
-            string text = "                           Hallo ich bin ein Text und hier         kann vieles drin stehen";
-
-            Console.WriteLine(text.Trim());
-
-            Console.WriteLine(fahrzeug.ToString());
+            Console.WriteLine(FahrzeugBase.KmhTOMph(100));
             Console.ReadKey();
+
+
+
+            //string meinString = "Hallo " + " liebe " + "Teilnehmer " + " jetzt " + " ist " + "gleicht Feierabend";
+
+            //StringBuilder sb = new StringBuilder();
+            //sb.Append("Hallo ");
+            //sb.Append(" liebe ");
+            //sb.Append(" usw....");
+
+            //Console.WriteLine(sb.ToString());
         }
     }
 }
