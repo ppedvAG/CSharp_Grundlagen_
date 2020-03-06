@@ -7,6 +7,22 @@ using System.Threading.Tasks;
 namespace Modul04_Lib
 {
 
+    public class FahrzeugMaxException : Exception
+    {
+        public FahrzeugMaxException(int maximaleAnzahl)
+            :base ("Es könnenn nur " + maximaleAnzahl.ToString() + " erstellt werden")
+        {
+
+        }
+
+        public FahrzeugMaxException(string EigeneMessage)
+            : base(EigeneMessage)
+        {
+
+        }
+    }
+
+
     public class FahrzeugBase
     {
         #region Membervariablene
@@ -28,7 +44,7 @@ namespace Modul04_Lib
                 AnzahlErstellterFahrzeuge++;
             }
             else
-                throw new Exception("Maximale Anzahl der Fahrzeuge wurde erreicht");
+                throw new FahrzeugMaxException(MaxAnzahlErstellterFahrzeuge);
         }
 
         public FahrzeugBase(string marke, string modell, int baujahr, double maxGeschw)
