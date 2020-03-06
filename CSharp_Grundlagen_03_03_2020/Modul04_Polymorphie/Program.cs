@@ -9,17 +9,11 @@ namespace Modul04_Polymorphie
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
+
             List<string> strListe1 = new List<string>();
             IList<string> strListe2 = new List<string>();
-
-
-
-
-
-
-
 
             Garage garage = new Garage();
 
@@ -43,6 +37,12 @@ namespace Modul04_Polymorphie
             garage.Einparken(jet1);
             garage.Einparken(propeller);
 
+            bobbyCar.Baujahr = 1800;
+
+            //Referenztypen, können im Nachgang noch den Inhalt einer Liste bearbeiten. Siehe am Beispiel BobbyCar
+            BobbyCar clonedBobbyCar = (BobbyCar) bobbyCar.Clone();
+            clonedBobbyCar.Baujahr = 1300;
+            garage.Einparken(clonedBobbyCar);
 
             garage.DisplayInventar();
         }

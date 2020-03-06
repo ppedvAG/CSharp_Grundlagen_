@@ -5,18 +5,20 @@ using System.Threading.Tasks;
 
 namespace Modul04_Lib
 {
-    public class Garage
+    public class Garage : ICloneable
     {
         private List<FahrzeugBase> fahrzeugListe;
 
+        public List<FahrzeugBase> FahrzeugListe { get => fahrzeugListe; set => fahrzeugListe = value; }
+
         public Garage ()
         {
-            fahrzeugListe = new List<FahrzeugBase>();
+            FahrzeugListe = new List<FahrzeugBase>();
         }
 
         public void Einparken(FahrzeugBase fahrzeug)
         {
-            fahrzeugListe.Add(fahrzeug);
+            FahrzeugListe.Add(fahrzeug);
         }
 
         public void DisplayInventar()
@@ -41,7 +43,7 @@ namespace Modul04_Lib
 
             Console.WriteLine("Inventarliste:");
 
-            foreach (FahrzeugBase currentFahrzeug in this.fahrzeugListe)
+            foreach (FahrzeugBase currentFahrzeug in this.FahrzeugListe)
             {
 
                 if (currentFahrzeug is SchiffBase)
@@ -102,5 +104,26 @@ namespace Modul04_Lib
             Console.ForegroundColor = fColor;
         }
 
+
+        public void DisplayFahrzeugeMitFahrlizenz()
+        {
+            List<FahrzeugBase> resultList = new List<FahrzeugBase>();
+            foreach (FahrzeugBase currentFahrzeug in FahrzeugListe)
+            {
+                if (currentFahrzeug is IFahrlizenz)
+                {
+                    resultList.Add(currentFahrzeug);
+                }
+            }
+        }
+
+        public object Clone()
+        {
+            Garage garage = new Garage();
+            garage.FahrzeugListe = this.FahrzeugListe;
+
+
+            return garage;
+        }
     }
 }

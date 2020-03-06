@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04_Virtual_Geometry", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04_Polymorphie", "Modul04_Polymorphie\Modul04_Polymorphie.csproj", "{FD5FC3A0-F8F3-4B36-976C-6977BF7DE869}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04_Wiederholungen", "Modul04_Wiederholungen\Modul04_Wiederholungen.csproj", "{15512ECC-7799-49D0-ADBE-9BE098772C45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04_Abstract_Sample", "Modul04_Abstract_Sample\Modul04_Abstract_Sample.csproj", "{4254CD1F-B0C2-4318-AD6F-D412DC1D6A12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{FD5FC3A0-F8F3-4B36-976C-6977BF7DE869}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD5FC3A0-F8F3-4B36-976C-6977BF7DE869}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD5FC3A0-F8F3-4B36-976C-6977BF7DE869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15512ECC-7799-49D0-ADBE-9BE098772C45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15512ECC-7799-49D0-ADBE-9BE098772C45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15512ECC-7799-49D0-ADBE-9BE098772C45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15512ECC-7799-49D0-ADBE-9BE098772C45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4254CD1F-B0C2-4318-AD6F-D412DC1D6A12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4254CD1F-B0C2-4318-AD6F-D412DC1D6A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4254CD1F-B0C2-4318-AD6F-D412DC1D6A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4254CD1F-B0C2-4318-AD6F-D412DC1D6A12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

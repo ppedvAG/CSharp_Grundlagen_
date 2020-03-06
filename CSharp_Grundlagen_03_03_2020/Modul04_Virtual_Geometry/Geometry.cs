@@ -31,7 +31,8 @@ namespace Modul04_Virtual_Geometry
 
     public class Circle : Shape
     {
-        public Circle(double r) : base(r, 0)
+        public Circle(double r) 
+            : base(r, 0)
         {
         }
 
@@ -48,7 +49,8 @@ namespace Modul04_Virtual_Geometry
 
     public class Sphere : Shape
     {
-        public Sphere(double r) : base(r, 0)
+        public Sphere(double r) 
+            : base(r, 0)
         {
         }
 
@@ -60,7 +62,8 @@ namespace Modul04_Virtual_Geometry
 
     public class Cylinder : Shape
     {
-        public Cylinder(double r, double h) : base(r, h)
+        public Cylinder(double r, double h) 
+            : base(r, h)
         {
         }
 
@@ -76,21 +79,22 @@ namespace Modul04_Virtual_Geometry
             :base (a,a)
         {
         }
+
+        //Quatrat ruf implziet die Basis - Methode Shape.Area auf
     }
+
 
     public class Rechteck : Shape
     {
         public Rechteck (int a, int b)
             :base (a, b)
         {
-
         }
 
         public override double Area()
         {
+            ////Rechteck ruf expliziet die Basis - Methode Shape.Area auf
             return base.Area();
         }
     }
-
-    
 }
